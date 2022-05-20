@@ -420,7 +420,7 @@ func TestWorkerCertBundle(t *testing.T) {
 	conn, _ := db.TestSetup(t, "postgres")
 	rw := db.New(conn)
 	wrapper := db.TestWrapper(t)
-	testKey := TestKkmsKey(ctx, t, conn, wrapper)
+	testKey := TestKmsKey(ctx, t, conn, wrapper)
 
 	worker := TestWorker(t, conn, wrapper)
 	workerAuth := TestWorkerAuth(ctx, t, conn, worker, testKey)
