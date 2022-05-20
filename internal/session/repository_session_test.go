@@ -1505,7 +1505,6 @@ func TestRepository_deleteTargetFKey(t *testing.T) {
 }
 
 func TestRepository_deleteTerminated(t *testing.T) {
-	t.Parallel()
 	ctx := context.Background()
 	conn, _ := db.TestSetup(t, "postgres")
 	rw := db.New(conn)
