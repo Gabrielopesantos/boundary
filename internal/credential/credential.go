@@ -86,6 +86,12 @@ type Dynamic interface {
 	Purpose() Purpose
 }
 
+// StaticCredential is a credential stored and managed by Boundary.
+type StaticCredential interface {
+	boundary.Resource
+	GetStoreId() string
+}
+
 // A Request represents a request for a credential from the SourceId for
 // the given purpose. For dynamic credentials, the SourceId is the PublicId
 // of a credential library.
